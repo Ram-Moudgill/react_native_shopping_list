@@ -15,7 +15,6 @@ workflows:
           npm install
       # - name: Install CocoaPods dependencies
         script: |
-          react-native bundle --entry-file index.js --platform ios --dev true --bundle-output ios/main.jsbundle --assets-dest ios
           cd ios
           pod install
           xcode-project build --workspace "$XCODE_WORKSPACE" --scheme "$XCODE_SCHEME"
